@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    align-items: center;
+    font-family: 'Russo One', sans-serif;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #850085;
+    color: white;
+}
+
+.sigIn{
+    margin-left: auto;
+}
+
+.div{
+    margin: 40px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0.5em;
+}
+
+.img{
+    margin-right: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,19 @@
+.mainLink{
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    margin: 30px auto 0;
+    padding: 1em 1.5em;
+    font-family: 'Rubik';
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 0.5em;
+    background-color: white;
+    box-shadow: 0px 0px 8px 3px rgba(34, 60, 80, 0.2);
+    transition: background-color 0.5s, color 0.3s;
+}
+.mainLink:hover{
+    cursor: pointer;
+    background-color: #AD00AD;
+    color: white;
+}
