@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function createGame(): any {
+const CreateGame: React.FC = () => {
   return (
     <div>create-game</div>
   )
 }
+
+export default CreateGame;

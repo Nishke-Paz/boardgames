@@ -1,8 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import classes from './mainLink.module.css'
 
-export default function MainLink(props: any) {
+export enum TypeLink {
+  createGame = 'createGame',
+  connectToGame= 'connectToGame'
+}
+
+type PropsMainLink = {
+  type: string;
+  children: React.ReactNode;
+}
+
+const MainLink: React.FC<PropsMainLink> = ({type, children}) => {
   return (
-    <a className={classes.mainLink}>{props.value}</a>
+    <Link to={`/${type}`} className={classes.mainLink}>{children}</Link>
   )
 }
+
+export default MainLink;

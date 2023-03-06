@@ -11,6 +11,8 @@
     background-color: white;
     box-shadow: 0px 0px 8px 3px rgba(34, 60, 80, 0.2);
     transition: background-color 0.5s, color 0.3s;
+    text-decoration: none;
+    color: black;
 }
 .mainLink:hover{
     cursor: pointer;

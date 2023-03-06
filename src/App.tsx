@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/Header';
-import MainLink from './components/UI/main-button/mainLink';
+import { useAppDispatch, useAppSelector } from './hooks/reduxHooks';
+import { loadGameAsync } from './redux/games/gamesSlice';
 
-function App() {
+const App: React.FC<{}> = () => {
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useAppDispatch();
+  const games = useAppSelector(store => store.games.list);
+  useEffect(() => {
+    dispatch(loadGameAsync());
+  }, [])
+  if(location.pathname === "/"){
+    navigate("/choiceOfAction");
+  }
+
   return (
     <>
       <Header></Header>
-      <MainLink value='Создать игру'></MainLink>
-      <MainLink value='Присоединиться к игре'></MainLink>
+      <Outlet></Outlet>
     </>
   );
 }
